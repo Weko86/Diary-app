@@ -1,6 +1,8 @@
+<div>
 <% @entries.each do |entry| %>
   <h2><%= link_to(entry.title, entry_path(entry)) %></h2>
     <p><%= entry.date %></p>
 <%= truncate(entry.contents, length: 200, separator: ' ', omission: "... ") { link_to "Continue", entry_path(entry)} %>
 <% end %>
-<%= link_to("New entry", new_entry_path) %>
+</div>
+<%= link_to("New entry", new_entry_path, class:"btn btn-default") %>
