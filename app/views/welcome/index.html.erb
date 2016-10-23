@@ -1,0 +1,19 @@
+<h1>Welcome#index</h1>
+    <h1>My Rails Girls Diary</h1>
+<div>
+ <% @entries.each do |entry| %>
+  <h2><%= entry.title %></h2>
+    <p><%= entry.date %></p>
+    <p><%= entry.contents %></p>
+<% end %>
+</div>
+    <div>
+  <h1>My favourite websites</h1>
+    <ul>
+<% for url, name in @websites %>
+  <li><a href="<%= url %>"><%= name %></a></li>
+<% end %>
+    </ul>
+  </div>
+  <img src="http://railsgirls.com/images/rg-warsaw.png" />
+<p>Find me in app/views/welcome/index.html.erb</p>
